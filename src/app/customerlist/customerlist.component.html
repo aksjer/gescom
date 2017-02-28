@@ -1,0 +1,23 @@
+<md-card>
+  <md-card-header>
+    <md-card-title>
+      <!--<form (ngSubmit)="add()" #addForm="ngForm">
+        <md-input-container>
+          <input md-input type="text" placeholder="name" [(ngModel)]="formCustomer.name">
+        </md-input-container>
+        <md-input-container>
+          <input md-input type="number" placeholder="age" [(ngModel)]="formCustomer.age">
+        </md-input-container>
+        <md-input-container>
+          <input md-input type="text" placeholder="description" [(ngModel)]="formCustomer.description">
+        </md-input-container>
+        <button type="submit"><md-icon>add</md-icon></button>
+      </form>-->
+    </md-card-title>
+  </md-card-header>
+  <div *ngIf="customers.length === 0">No customers</div>
+  <div *ngFor="let c of customers" class="customerlistitem">
+    <app-customerlistitem [customer]="c"></app-customerlistitem>
+  </div>
+</md-card>
+<router-outlet></router-outlet>

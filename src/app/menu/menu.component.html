@@ -1,0 +1,7 @@
+<button md-button [mdMenuTriggerFor]="menu">Menu</button>
+<md-menu #menu="mdMenu">
+  <button md-menu-item routerLink="/">Home</button>
+  <button md-menu-item routerLink="/customer">Customers</button>
+</md-menu>
+
+<button (click)="isLogged()">click</button>

@@ -1,0 +1,10 @@
+.flex-row{
+  display: flex;
+  align-items: center;
+}
+.flex-item{
+  flex:1;
+}
+.flex-item:not(:first-child){
+  text-align: right;
+}

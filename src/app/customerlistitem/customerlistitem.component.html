@@ -1,0 +1,28 @@
+<md-card>
+  <div class="flex-row">
+    <div class="flex-item">
+      <md-card-header>
+        <md-card-title>{{customer.name}}
+          <md-icon [routerLink]="['/customer', customer.id]">mode_edit</md-icon>
+          <md-icon (click)="delete()">delete</md-icon>
+        </md-card-title>
+        <md-card-subtitle>{{customer.age}}</md-card-subtitle>
+      </md-card-header>
+      <md-card-content>
+        <div>
+          {{customer.description}}
+        </div>
+      </md-card-content>
+      <!--<md-card-actions>
+    <button md-button>LIKE</button>
+    <button md-button>SHARE</button>
+  </md-card-actions>-->
+    </div>
+    <div class="flex-item">
+      <md-icon [mdMenuTriggerFor]="menu">more_vert</md-icon>
+      <md-menu #menu="mdMenu">
+        <button md-menu-item *ngFor="let item of customer.options" (click)="console(item)">{{item}}</button>
+      </md-menu>
+    </div>
+  </div>
+</md-card>
